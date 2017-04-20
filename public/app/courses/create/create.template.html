@@ -1,0 +1,24 @@
+<h1>Create a Message</h1>
+<form (ngSubmit)="create()" novalidate>
+	<div>
+		<label for="recepient">Recepient</label>
+		<div>
+			<input type="text" required [(ngModel)]="course.recepient" name="recepient" placeholder="Recepient Name">
+		</div>
+	</div><br/>
+	<div>
+		<label for="content">Message Content</label>
+		<div>
+			<div>
+             <textarea type="text" required cols="30" rows="10"
+                      [(ngModel)]="course.content" name="content" placeholder="Type Message Here">
+            </textarea>
+        </div>
+		</div>
+	</div><br/>
+	
+	<div>
+		<input type="submit" id="submitBtn">
+	</div>
+	<strong id="error">{{errorMessage}}</strong>
+</form>

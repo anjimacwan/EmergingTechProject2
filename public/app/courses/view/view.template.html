@@ -1,0 +1,13 @@
+<section *ngIf="course && course.creator">
+	<h1>{{course.coursename}}</h1>
+	<div><h3>Section:{{course.section}}</h3> <h3>Semester: {{course.semester}}</h3></div>		
+	<div *ngIf="allowEdit">
+	    <a [routerLink]="['/courses', course._id, 'edit']" id="linkBtn">edit</a>
+	    <button (click)="delete()" id="submitBtn">delete</button>&nbsp;
+	</div>
+	<small>
+	    <em>Posted on {{course.created}} by {{course.creator.fullName}}</em>
+	</small>
+
+	<p>{{course.content}}</p>
+</section>

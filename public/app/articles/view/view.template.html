@@ -1,0 +1,17 @@
+﻿<section *ngIf="article && article.creator">
+    <h1>{{article.patientname}}</h1>
+    <div *ngIf="allowEdit">
+        <button [routerLink]="['/articles', article._id, 'edit']">Edit Vital Signs</button>
+        <button (click)="delete()">Delete Vital Signs</button>
+    </div>
+    <small>
+        <em>
+            Posted on {{article.created}} by {{
+        article.creator.fullName}}
+        </em>
+    </small>
+    <p>Body Temperature        :{{article.temperature}}</p>
+    <p>Heart Rate              :{{article.heartrate}}</p>
+    <p>Blood Pressure Low      :{{article.bloodpressurelow}}</p>
+    <p>Blood Pressure High     :{{article.bloodpressurehigh}}</p>
+</section>

@@ -1,0 +1,23 @@
+<div *ngIf="user">
+	<h4 style="text-align:left">Hello {{user.firstName}}</h4>
+	<h4 style="text-align:left">User Type : <span style="text-transform: uppercase"> {{user.accountType}} </span></h4>
+
+    <ul>
+        <li><a href="http://store.steampowered.com/" id="linkBtn" target="_blank">Games</a></li><br/>
+        <li><a href="http://www.health.com/" id="linkBtn" target="_blank">Health Magazine</a></li><br/>
+        <li><a href="https://www.reddit.com/r/Fitness/wiki/index" id="linkBtn" target="_blank">Reddit Fitness</a></li><br/>
+        <li><a href="http://www.mayoclinic.org/symptom-checker/select-symptom/itt-20009075" id="linkBtn" target="_blank">Symptom Checker</a></li><br/>   
+        
+    </ul>
+
+    <br />
+    <a href="/api/auth/signout" id="linkBtn2">Signout</a>
+	<!-- HTML for homepage should be added here -->
+</div>
+<div *ngIf="!user">
+	<img src="img/login.png" width="60px" height="60px"/>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<img src="img/logo.jpg" width="300px"/><br/><br/>
+	<a [routerLink]="['/authentication/signup']" id="linkBtn">Signup</a>
+	<a [routerLink]="['/authentication/signin']" id="linkBtn">Signin</a>
+</div>

@@ -1,0 +1,84 @@
+/*
+	Custom CSS used for the website
+*/
+
+.navbar{
+    background-color:#ff9900;
+    -webkit-box-shadow: 0px 7px 15px 0px rgba(0,0,0,0.77);
+	-moz-box-shadow: 0px 7px 15px 0px rgba(0,0,0,0.77);
+	box-shadow: 0px 7px 15px 0px rgba(0,0,0,0.77);
+	padding: 25px;
+    margin: 25px;
+    text-align: right;
+}
+
+.navbar a{
+	color: white;
+	text-decoration: none;
+}
+
+.container{
+	position: absolute;
+	text-align: left;
+	background-color:#F0F0F0;
+    -webkit-box-shadow: 0px 7px 15px 0px rgba(0,0,0,0.77);
+	-moz-box-shadow: 0px 7px 15px 0px rgba(0,0,0,0.77);
+	box-shadow: 0px 7px 15px 0px rgba(0,0,0,0.77);
+	padding: 50px;
+    margin: 50px;
+    width: 500px;
+    clear: both;
+	left: 20%;
+	top: 20%;
+}
+
+.container input {
+       width: 100%;
+        clear: both;
+}
+
+.container h1{
+	text-align: center;
+}
+
+#submitBtn{
+	width: 40%;
+	height: 30px;
+	background-color: green;
+	color: white;
+	cursor: pointer; cursor: hand;
+}
+
+#loginBtn{
+	width: 20%;
+	height: 30px;
+	background-color: orange;
+	color: white;
+	cursor: pointer; cursor: hand;
+}
+
+#linkBtn {
+  height: 30px;
+  font: bold 11px Arial;
+  text-decoration: none;
+  background-color:cornflowerblue;
+  color: #333333;
+  padding: 8px 6px 8px 6px;
+  border-top: 1px solid #CCCCCC;
+  border-right: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+  border-left: 1px solid #CCCCCC;
+}
+
+#linkBtn2 {
+  height: 30px;
+  font: bold 11px Arial;
+  text-decoration: none;
+  background-color:orange;
+  color: #333333;
+  padding: 8px 6px 8px 6px;
+  border-top: 1px solid #CCCCCC;
+  border-right: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+  border-left: 1px solid #CCCCCC;
+}

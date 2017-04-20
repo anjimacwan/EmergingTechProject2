@@ -1,0 +1,28 @@
+<div *ngIf="user">
+	<h4 style="text-align:left">Hello {{user.firstName}}</h4>
+	<h4 style="text-align:left">User Type : <span style="text-transform: uppercase"> {{user.accountType}} </span></h4>
+
+    <ul>
+        <li><a [routerLink]="['/articles']" id="linkBtn">View Vital Signs</a></li>
+        <br/>
+        <li><a [routerLink]="['/articles/create']" id="linkBtn">Record Vital Signs</a></li>
+        <br/>
+       <li><a [routerLink]="['/courses']" id="linkBtn" >List Message</a></li><br/>
+	<li><a [routerLink]="['/courses/create']" id="linkBtn" >Create Message</a></li><br/>
+    <div *ngIf="user.accountType === 'patient'">
+    <li><a [routerLink]="['/motivation']" id="linkBtn" >Daily Motivations</a></li><br/>
+    </div>
+   
+    
+    </ul>
+    <br />
+    <a href="/api/auth/signout" id="linkBtn2">Signout</a>
+	<!-- HTML for homepage should be added here -->
+</div>
+<div *ngIf="!user">
+	<img src="img/login.png" width="60px" height="60px"/>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<img src="img/logo.jpg" width="300px"/><br/><br/>
+	<a [routerLink]="['/authentication/signup']" id="linkBtn">Signup</a>
+	<a [routerLink]="['/authentication/signin']" id="linkBtn">Signin</a>
+</div>

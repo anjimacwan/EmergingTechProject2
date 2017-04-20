@@ -1,0 +1,42 @@
+﻿<h1>Patient's Vital Signs Information</h1>
+<form (ngSubmit)="create()" novalidate>
+    <div >
+        <label for="patientname">Patient Name</label>
+        <div>
+            <input type="text" required [(ngModel)]="article.patientname"
+                   name="patientname" placeholder="Patient Name">
+        </div>
+    </div>
+    <div>
+        <label for="temperature">Temperature</label>
+        <div>
+            <input type="text" required [(ngModel)]="article.temperature"
+                   name="temperature" placeholder="Temperature">
+        </div>
+    </div>
+    <div>
+        <label for="heartrate">Heart Rate</label>
+        <div>
+            <input type="text" required [(ngModel)]="article.heartrate"
+                   name="heartrate" placeholder="Heart Rate">
+        </div>
+    </div>
+    <div>
+        <label for="bloodpressurelow">Blood Pressure Low</label>
+        <div>
+           <input type="text" required [(ngModel)]="article.bloodpressurelow"
+                   name="bloodpressurelow" placeholder="BPL">
+        </div>
+    </div>
+    <div>
+        <label for="bloodpressurehigh">Blood Pressure High</label>
+        <div>
+           <input type="text" required [(ngModel)]="article.bloodpressurehigh"
+                   name="bloodpressurehigh" placeholder="BPH">
+        </div>
+    </div>
+    <div>
+        <input type="submit">
+    </div>
+    <strong id="error">{{errorMessage}}</strong>
+</form>
